@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://ugurkazdal.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ugurkazdal.com/" rel="alternate" type="text/html" /><updated>2019-04-20T13:11:22+03:00</updated><id>https://ugurkazdal.com/feed.xml</id><title type="html">Uğur Kazdal</title><subtitle>Technology, Programming, Devops and all the crazy staff. </subtitle><entry><title type="html">Mysql Docker Container</title><link href="https://ugurkazdal.com/devops/2019/04/10/mysql-docker-container.html" rel="alternate" type="text/html" title="Mysql Docker Container" /><published>2019-04-10T13:49:00+03:00</published><updated>2019-04-10T13:49:00+03:00</updated><id>https://ugurkazdal.com/devops/2019/04/10/mysql-docker-container</id><content type="html" xml:base="https://ugurkazdal.com/devops/2019/04/10/mysql-docker-container.html">&lt;p&gt;Sometimes I use Mysql Container for simple tasks or sample queries. Sometimes I need quick laravel application to handle some API request or to do a job for me.&lt;/p&gt;
+
+&lt;p&gt;Anyway, let’s look at the Mysql Container Docker Compose file below,&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;yaml&quot;&gt;
+version: '3.1'
+
+services:
+
+  db:
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    ports:  
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: kazdal
+&lt;/code&gt;
+&lt;/pre&gt;
+
+&lt;p&gt;&lt;em&gt;–default-authentication-plugin=mysql_native_password&lt;/em&gt; this is the command for laravel application if you want to use Mysql 8.&lt;/p&gt;
+
+&lt;p&gt;So I hear that you do not want to use mysql shell to check databases, so you can use adminer, so updated docker compose file for mysql is this ;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;yaml&quot;&gt;
+version: '3.1'
+services:
+
+  db:
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    ports:  
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: kazdal
+
+   adminer:
+     image: adminer
+     restart: always
+     ports:
+       - 8080:8080
+&lt;/code&gt;
+&lt;/pre&gt;
+
+&lt;p&gt;Any Comments to this &lt;a href=&quot;https://gist.github.com/uurtech/327edbfb29058035a1c7f0daa8b60a57&quot;&gt;gist&lt;/a&gt; is more than welcome.&lt;/p&gt;</content><author><name></name></author><category term="Devops" /><summary type="html">Sometimes I use Mysql Container for simple tasks or sample queries. Sometimes I need quick laravel application to handle some API request or to do a job for me.</summary></entry><entry><title type="html">Slack Tool For Deleting Messages</title><link href="https://ugurkazdal.com/tools/2019/04/10/slack-tool-for-deleting-messages.html" rel="alternate" type="text/html" title="Slack Tool For Deleting Messages" /><published>2019-04-10T13:49:00+03:00</published><updated>2019-04-10T13:49:00+03:00</updated><id>https://ugurkazdal.com/tools/2019/04/10/slack-tool-for-deleting-messages</id><content type="html" xml:base="https://ugurkazdal.com/tools/2019/04/10/slack-tool-for-deleting-messages.html">&lt;p&gt;I’ve searched for a tool for Slack Messages to delete them all, sometimes you need to use this kind of tool to delete Slack Messages (if you have talked too much).
+I and my friends decided to build a Slack Message Delete tool to share everyone, then we thought why not add other platforms?&lt;/p&gt;
+
+&lt;p&gt;Our Message Deleter app now have only Slack but in near future you are going to use it for Twitter, Skype, Facebook, Even Emails.&lt;/p&gt;
+
+&lt;p&gt;We provide a backup download of your data (if you like to). We do not collect or store anything, even Backup file will be deleted next day so you have a single day to download your backup !&lt;/p&gt;
+
+&lt;p&gt;If you like to visit out Slack Message Deleter app plese visit &lt;a href=&quot;https://messagedeleter.com/?utm_source=ugurkazdal.com&quot;&gt;Message Deleter&lt;/a&gt; and I will wait for you feedbacks.&lt;/p&gt;
+
+&lt;p&gt;Thanks.&lt;/p&gt;</content><author><name></name></author><category term="tools" /><category term="slack,message,delete" /><summary type="html">I’ve searched for a tool for Slack Messages to delete them all, sometimes you need to use this kind of tool to delete Slack Messages (if you have talked too much). I and my friends decided to build a Slack Message Delete tool to share everyone, then we thought why not add other platforms?</summary></entry></feed>
