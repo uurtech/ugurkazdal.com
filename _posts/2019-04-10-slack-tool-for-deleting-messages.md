@@ -13,6 +13,6 @@ Our Message Deleter app now have only Slack but in near future you are going to 
 
 We provide a backup download of your data (if you like to). We do not collect or store anything, even Backup file will be deleted next day so you have a single day to download your backup !
 
-If you like to visit out Slack Message Deleter app plese visit [Message Deleter](https://messagedeleter.com/?utm_source=ugurkazdal.com) and I will wait for you feedbacks. 
+If you like to visit out Slack Message Deleter app plese visit [Message Deleter](https://messagebender.com/?utm_source=ugurkazdal.com) and I will wait for you feedbacks. 
 
 Thanks.
