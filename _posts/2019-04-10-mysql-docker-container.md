@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Slack Tool For Deleting Messages
+title: Mysql Docker Container
 date: 2019-04-10 13:49 +0300
 tags: devops,mysql,docker
 category: devops
