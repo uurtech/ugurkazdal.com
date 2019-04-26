@@ -4,7 +4,8 @@ class Jekyll < Thor
   method_option :editor, :default => "subl"
   def new(*title)
     title = title.join(" ")
-    filename = "_posts/#{title.to_url}.md"
+    date = Time.now.strftime('%Y-%m-%d')
+    filename = "_posts/#{date}-#{title.to_url}.md"
 
     if File.exist?(filename)
       abort("#{filename} already exists!")
