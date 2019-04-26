@@ -2,6 +2,7 @@
 layout: post
 title: Change Linux username
 tags: linux,change,username
+category: linux
 ---
 
 
