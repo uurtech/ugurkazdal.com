@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Change Linux username"
+title: Change Linux username
 tags: linux,change,username
 ---
 

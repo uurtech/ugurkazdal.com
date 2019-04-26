@@ -1,8 +1,9 @@
 ---
 layout: post
-title: Mysql Docker Container
+title: Slack Tool For Deleting Messages
 date: 2019-04-10 13:49 +0300
 tags: devops,mysql,docker
+category: devops
 ---
 
 Sometimes I use Mysql Container for simple tasks or sample queries. Sometimes I need quick laravel application to handle some API request or to do a job for me. 
