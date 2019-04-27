@@ -1,41 +1,49 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+title: Ugur Kazdal
+description: Uğur KAZDAL Blog on Technology
+author: Uğur Kazdal
+github: https://github.com/uurtech
+about: I'm a Linux Ent. Who loves PHP, Python, Go and So.
+google_analytics: UA-133420208-1
+avatar_url: /static/img/ugur-kazdal.jpg
 
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-title: Uğur Kazdal
-email: developer.ugur@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Technology, Programming, Devops and all the crazy staff. 
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://ugurkazdal.com" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: ugurkazdal
-github_username:  uurtech
+enableTags: true
+tagarray: []
 
-# Build settings
+collections:
+  project:
+    output: true
+    permalink: /project/:path/
+
+social:
+    - icon: fa-twitter
+      link: "https://twitter.com/ugurkazdal"
+    - icon: fa-linkedin
+      link: "https://www.linkedin.com/in/ugur-kazdal-88086a152/"
+    - icon: fa-github
+      link: "https://github.com/uurtech"
+
+share:
+  twitter_username: ugurkazdal
+
+urls:
+    - text: About Me
+      url: /about/
+    - text: XML Feed
+      url: /feed.xml
+
+url: "https://ugurkazdal.com"
+baseurl: ""
+paginate: 20
+per_page: 20
+paginate_path: "/page/:num/"
 markdown: kramdown
-theme: minima
-plugins:
-  - jekyll-feed
+gems:
+  - jekyll-paginate
+  - jekyll-gist
 
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+  endings: all
+  ignore:
+    envs: ['development']

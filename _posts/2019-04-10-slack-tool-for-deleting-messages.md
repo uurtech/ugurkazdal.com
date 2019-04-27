@@ -2,8 +2,8 @@
 layout: post
 title: Slack Tool For Deleting Messages
 date: 2019-04-10 13:49 +0300
-tags: slack,message,delete
-category: tools
+tags: [slack,message,delete]
+categories: tools
 ---
 
 I've searched for a tool for Slack Messages to delete them all, sometimes you need to use this kind of tool to delete Slack Messages (if you have talked too much).

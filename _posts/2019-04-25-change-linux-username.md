@@ -1,8 +1,9 @@
 ---
 layout: post
 title: Change Linux username
-tags: linux,change,username
-category: linux
+tags: [linux,change,username]
+date: 2019-04-10 13:49 +0300
+categories: linux
 ---
 
 

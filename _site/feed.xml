@@ -1,4 +1,101 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://ugurkazdal.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ugurkazdal.com/" rel="alternate" type="text/html" /><updated>2019-04-26T11:23:06+03:00</updated><id>https://ugurkazdal.com/feed.xml</id><title type="html">Uğur Kazdal</title><subtitle>Technology, Programming, Devops and all the crazy staff. </subtitle><entry><title type="html">Change Linux username</title><link href="https://ugurkazdal.com/linux/2019/04/25/change-linux-username.html" rel="alternate" type="text/html" title="Change Linux username" /><published>2019-04-25T00:00:00+03:00</published><updated>2019-04-25T00:00:00+03:00</updated><id>https://ugurkazdal.com/linux/2019/04/25/change-linux-username</id><content type="html" xml:base="https://ugurkazdal.com/linux/2019/04/25/change-linux-username.html">&lt;p&gt;Sometimes you could want to change your username in Linux like i did about 5 minutes ago. 
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ugur Kazdal</title>
+    <description>Uğur KAZDAL Blog on Technology</description>
+    <link>https://ugurkazdal.com/</link>
+    <atom:link href="https://ugurkazdal.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sat, 27 Apr 2019 11:39:00 +0300</pubDate>
+    <lastBuildDate>Sat, 27 Apr 2019 11:39:00 +0300</lastBuildDate>
+    <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>Mysql Import And Export in CLI</title>
+        <description>&lt;p&gt;Many times I don’t want to use Workbench or any other GUI supported DB Product, I mostly live in CLI, so I need to do my stuff in cli. Also Mysql Import and Export is easy on CLI, so let’s give it a shot.&lt;/p&gt;
+
+&lt;p&gt;This is how we export current mysql database,&lt;/p&gt;
+&lt;pre&gt;
+&lt;code&gt;
+mysqldump -u {USERNAME} -p {PASSWORD} database &amp;gt; db_backup.sql
+&lt;/code&gt;
+&lt;/pre&gt;
+
+&lt;p&gt;If you don’t type password in this line you could just skip typing then cli asks you to put your password in secret mode. :)&lt;/p&gt;
+
+&lt;p&gt;Let’s say you want to dump all the databases you have in mysql so you can run this;&lt;/p&gt;
+&lt;pre&gt;
+&lt;code&gt;
+mysqldump -u {USERNAME} -p {PASSWORD}  --all-databases &amp;gt; db_backup.sql
+&lt;/code&gt;
+&lt;/pre&gt;
+
+&lt;p&gt;Not enough ? You want to get geeky ? You need to export just tables ? Then we have;&lt;/p&gt;
+&lt;pre&gt;
+&lt;code&gt;
+mysqldump -u {USERNAME} -p {PASSWORD}  database table1 table2 &amp;gt; tables.sql
+&lt;/code&gt;
+&lt;/pre&gt;
+
+&lt;p&gt;NOT ENOUGH ??? ARE YOU HANGRY !!!! you need to compress your mysql backup !!!&lt;/p&gt;
+&lt;pre&gt;
+&lt;code&gt;
+mysqldump -u {USERNAME} -p {PASSWORD}  database | gzip &amp;gt; backups.sql.gz
+&lt;/code&gt;
+&lt;/pre&gt;
+
+&lt;p&gt;OMG. You do not want to ssh to your server and enabled remote access for mysql ? I see … so you should run this;&lt;/p&gt;
+&lt;pre&gt;
+&lt;code&gt;
+mysqldump -P 3306 -h {REMOTE_IP} -u {USERNAME} -p database &amp;gt; backup.sql&lt;/code&gt;
+&lt;/pre&gt;
+
+&lt;p&gt;So all of those cli commands are for exporting mysql databases. What if you want to import a mysql database? Let’s try this command,&lt;/p&gt;
+
+&lt;pre&gt;
+&lt;code&gt;
+mysqldump -u {USERNAME} -p {PASSWORD} database &amp;lt; db_backup.sql
+&lt;/code&gt;
+&lt;/pre&gt;
+
+&lt;p&gt;You saw that ? we just mirrored &lt;strong&gt;&lt;em&gt;&amp;gt;&lt;/em&gt;&lt;/strong&gt; to &lt;strong&gt;&lt;em&gt;&amp;lt;&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;One other tip to upload your sql to your server.&lt;/p&gt;
+
+&lt;p&gt;Please use &lt;em&gt;scp&lt;/em&gt; just as&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;scp {WHAT} {WHERE}&lt;/em&gt; 
+let’s give an example for &lt;em&gt;scp&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;
+&lt;code&gt;
+scp my_mysql_dump_file mysshuser@REMOTE_IP:/var/www/backups
+&lt;/code&gt;
+&lt;/pre&gt;
+
+&lt;p&gt;Now you know how to upload via scp and import &amp;amp; export in mysql !&lt;/p&gt;
+</description>
+        <pubDate>Wed, 10 Apr 2019 13:49:00 +0300</pubDate>
+        <link>https://ugurkazdal.com/linux/2019/04/10/mysql-import-and-export-in-cli.html</link>
+        <guid isPermaLink="true">https://ugurkazdal.com/linux/2019/04/10/mysql-import-and-export-in-cli.html</guid>
+        
+        <category>linux</category>
+        
+        <category>mysql</category>
+        
+        <category>mysqldump</category>
+        
+        <category>mysql import</category>
+        
+        <category>mysql export</category>
+        
+        
+        <category>linux</category>
+        
+      </item>
+    
+      <item>
+        <title>Change Linux username</title>
+        <description>&lt;p&gt;Sometimes you could want to change your username in Linux like i did about 5 minutes ago. 
 So let’s see how to change username and directory with linux/cli.&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Logout off your current user,&lt;/li&gt;
@@ -22,7 +119,54 @@ usermod -l {newUserName} -d /home/{newUserName} -m {exUserName}
 groupmod -n {newGroup} {exGroup}
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;So thats it, now you can login with your new linux user and then run &lt;em&gt;startx&lt;/em&gt; to run desktop environment.&lt;/p&gt;</content><author><name></name></author><category term="linux" /><category term="linux,change,username" /><summary type="html">Sometimes you could want to change your username in Linux like i did about 5 minutes ago. So let’s see how to change username and directory with linux/cli. Logout off your current user, ctrl+alt+f2 login with your current username then sudo passwd root</summary></entry><entry><title type="html">Mysql Docker Container</title><link href="https://ugurkazdal.com/devops/2019/04/10/mysql-docker-container.html" rel="alternate" type="text/html" title="Mysql Docker Container" /><published>2019-04-10T13:49:00+03:00</published><updated>2019-04-10T13:49:00+03:00</updated><id>https://ugurkazdal.com/devops/2019/04/10/mysql-docker-container</id><content type="html" xml:base="https://ugurkazdal.com/devops/2019/04/10/mysql-docker-container.html">&lt;p&gt;Sometimes I use Mysql Container for simple tasks or sample queries. Sometimes I need quick laravel application to handle some API request or to do a job for me.&lt;/p&gt;
+&lt;p&gt;So thats it, now you can login with your new linux user and then run &lt;em&gt;startx&lt;/em&gt; to run desktop environment.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 10 Apr 2019 13:49:00 +0300</pubDate>
+        <link>https://ugurkazdal.com/linux/2019/04/10/change-linux-username.html</link>
+        <guid isPermaLink="true">https://ugurkazdal.com/linux/2019/04/10/change-linux-username.html</guid>
+        
+        <category>linux</category>
+        
+        <category>change</category>
+        
+        <category>username</category>
+        
+        
+        <category>linux</category>
+        
+      </item>
+    
+      <item>
+        <title>Slack Tool For Deleting Messages</title>
+        <description>&lt;p&gt;I’ve searched for a tool for Slack Messages to delete them all, sometimes you need to use this kind of tool to delete Slack Messages (if you have talked too much).
+I and my friends decided to build a Slack Message Delete tool to share everyone, then we thought why not add other platforms?&lt;/p&gt;
+
+&lt;p&gt;Our Message Deleter app now have only Slack but in near future you are going to use it for Twitter, Skype, Facebook, Even Emails.&lt;/p&gt;
+
+&lt;p&gt;We provide a backup download of your data (if you like to). We do not collect or store anything, even Backup file will be deleted next day so you have a single day to download your backup !&lt;/p&gt;
+
+&lt;p&gt;If you like to visit out Slack Message Deleter app plese visit &lt;a href=&quot;https://messagebender.com/?utm_source=ugurkazdal.com&quot;&gt;Message Bender&lt;/a&gt; and I will wait for you feedbacks.&lt;/p&gt;
+
+&lt;p&gt;Thanks.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 10 Apr 2019 13:49:00 +0300</pubDate>
+        <link>https://ugurkazdal.com/tools/2019/04/10/slack-tool-for-deleting-messages.html</link>
+        <guid isPermaLink="true">https://ugurkazdal.com/tools/2019/04/10/slack-tool-for-deleting-messages.html</guid>
+        
+        <category>slack</category>
+        
+        <category>message</category>
+        
+        <category>delete</category>
+        
+        
+        <category>tools</category>
+        
+      </item>
+    
+      <item>
+        <title>Mysql Docker Container</title>
+        <description>&lt;p&gt;Sometimes I use Mysql Container for simple tasks or sample queries. Sometimes I need quick laravel application to handle some API request or to do a job for me.&lt;/p&gt;
 
 &lt;p&gt;Anyway, let’s look at the Mysql Container Docker Compose file below,&lt;/p&gt;
 
@@ -67,13 +211,22 @@ services:
 &lt;/code&gt;
 &lt;/pre&gt;
 
-&lt;p&gt;Any Comments to this &lt;a href=&quot;https://gist.github.com/uurtech/327edbfb29058035a1c7f0daa8b60a57&quot;&gt;gist&lt;/a&gt; is more than welcome.&lt;/p&gt;</content><author><name></name></author><category term="devops" /><category term="devops,mysql,docker" /><summary type="html">Sometimes I use Mysql Container for simple tasks or sample queries. Sometimes I need quick laravel application to handle some API request or to do a job for me.</summary></entry><entry><title type="html">Slack Tool For Deleting Messages</title><link href="https://ugurkazdal.com/tools/2019/04/10/slack-tool-for-deleting-messages.html" rel="alternate" type="text/html" title="Slack Tool For Deleting Messages" /><published>2019-04-10T13:49:00+03:00</published><updated>2019-04-10T13:49:00+03:00</updated><id>https://ugurkazdal.com/tools/2019/04/10/slack-tool-for-deleting-messages</id><content type="html" xml:base="https://ugurkazdal.com/tools/2019/04/10/slack-tool-for-deleting-messages.html">&lt;p&gt;I’ve searched for a tool for Slack Messages to delete them all, sometimes you need to use this kind of tool to delete Slack Messages (if you have talked too much).
-I and my friends decided to build a Slack Message Delete tool to share everyone, then we thought why not add other platforms?&lt;/p&gt;
-
-&lt;p&gt;Our Message Deleter app now have only Slack but in near future you are going to use it for Twitter, Skype, Facebook, Even Emails.&lt;/p&gt;
-
-&lt;p&gt;We provide a backup download of your data (if you like to). We do not collect or store anything, even Backup file will be deleted next day so you have a single day to download your backup !&lt;/p&gt;
-
-&lt;p&gt;If you like to visit out Slack Message Deleter app plese visit &lt;a href=&quot;https://messagebender.com/?utm_source=ugurkazdal.com&quot;&gt;Message Bender&lt;/a&gt; and I will wait for you feedbacks.&lt;/p&gt;
-
-&lt;p&gt;Thanks.&lt;/p&gt;</content><author><name></name></author><category term="tools" /><category term="slack,message,delete" /><summary type="html">I’ve searched for a tool for Slack Messages to delete them all, sometimes you need to use this kind of tool to delete Slack Messages (if you have talked too much). I and my friends decided to build a Slack Message Delete tool to share everyone, then we thought why not add other platforms?</summary></entry></feed>
+&lt;p&gt;Any Comments to this &lt;a href=&quot;https://gist.github.com/uurtech/327edbfb29058035a1c7f0daa8b60a57&quot;&gt;gist&lt;/a&gt; is more than welcome.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 10 Apr 2019 13:49:00 +0300</pubDate>
+        <link>https://ugurkazdal.com/devops/2019/04/10/mysql-docker-container.html</link>
+        <guid isPermaLink="true">https://ugurkazdal.com/devops/2019/04/10/mysql-docker-container.html</guid>
+        
+        <category>devops</category>
+        
+        <category>mysql</category>
+        
+        <category>docker</category>
+        
+        
+        <category>devops</category>
+        
+      </item>
+    
+  </channel>
+</rss>
