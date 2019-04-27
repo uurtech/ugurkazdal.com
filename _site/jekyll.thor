@@ -16,10 +16,10 @@ class Jekyll < Thor
       post.puts "---"
       post.puts "layout: post"
       post.puts "title: \"#{title.gsub(/&/,'&amp;')}\""
-      post.puts "date: {date}"
+      post.puts "date: #{date}"
       post.puts "tags:"
-      post.puts "categories"
-      post.puts "image"
+      post.puts "categories:"
+      post.puts "image:"
       post.puts "---"
     end
 

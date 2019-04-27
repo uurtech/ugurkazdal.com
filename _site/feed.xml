@@ -1,13 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Ugur Kazdal</title>
+    <title>Linux Oriented Life.</title>
     <description>Uğur KAZDAL Blog on Technology</description>
     <link>https://ugurkazdal.com/</link>
     <atom:link href="https://ugurkazdal.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 27 Apr 2019 11:39:00 +0300</pubDate>
-    <lastBuildDate>Sat, 27 Apr 2019 11:39:00 +0300</lastBuildDate>
+    <pubDate>Sat, 27 Apr 2019 12:15:58 +0300</pubDate>
+    <lastBuildDate>Sat, 27 Apr 2019 12:15:58 +0300</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>Install Damn Mysql To Centos And Get Root Password</title>
+        <description>&lt;p&gt;Sometimes it can be pain on the keyboard to handle mysql on Centos if you don’t follow instructions. 
+So we need to focus on tutorials line by line. So Let’s start with Mysql On Centos,&lt;/p&gt;
+
+&lt;p&gt;First thing first, Which Mysql Version you need ? I prefer 5.7 but let’s continue for MySql 8.0 then we can move on for MySql 5.7&lt;/p&gt;
+
+&lt;p&gt;#Enable MySQL 8.0 Repository and install&lt;/p&gt;
+&lt;pre&gt;
+&lt;code&gt;
+sudo yum localinstall https://dev.mysql.com/get/mysql80-community-release-el7-1.noarch.rpm
+sudo yum install mysql-community-server
+&lt;/code&gt;
+&lt;/pre&gt;
+
+&lt;p&gt;#Enable for Mysql 5.7 and install&lt;/p&gt;
+&lt;pre&gt;
+&lt;code&gt;
+sudo yum localinstall https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm
+sudo yum install mysql-community-server
+&lt;/code&gt;
+&lt;/pre&gt;
+
+&lt;p&gt;Now you can get your automatically generated Mysql root password by&lt;/p&gt;
+
+&lt;pre&gt;
+&lt;code&gt;
+sudo grep 'temporary password' /var/log/mysqld.log
+&lt;/code&gt;
+&lt;/pre&gt;
+
+&lt;p&gt;And the output should looks like this (or uglier)&lt;/p&gt;
+&lt;pre&gt;
+&lt;code&gt;[Server] A temporary password is generated for root@localhost: %sasdS)(=)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now we should do mysql_secure_installation to set new rules and password for root,&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;
+sudo mysql_secure_installation
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now can access mysqll by typing&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;mysql -u root -p &lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;#Recover Mysql Root Password&lt;/p&gt;
+
+&lt;p&gt;Sometimes when you do not log any information for you systems, you forget your root password,&lt;/p&gt;
+
+&lt;p&gt;First stop your mysql service,&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;
+sudo systemctl stop mysql
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Start the mysql without loading grant tables,&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo mysqld_safe --skip-grant-tables --skip-networking &amp;amp;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now you should able to login mysql without root password and set new mysql root password&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;
+sudo mysql -u root
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'new_password';
+FLUSH PRIVILEGES;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now if everything should work fine you can restart mysql service,&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo systemctl stop mysql
+sudo systemctl start mysql&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If you have any problem with mysql installation, setting new root password or recovering mysql root password. Just get in touch.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 27 Apr 2019 00:00:00 +0300</pubDate>
+        <link>https://ugurkazdal.com/linux,/mysql/2019/04/27/install-damn-mysql-to-centos-and-get-root-password.html</link>
+        <guid isPermaLink="true">https://ugurkazdal.com/linux,/mysql/2019/04/27/install-damn-mysql-to-centos-and-get-root-password.html</guid>
+        
+        <category>linux</category>
+        
+        <category>mysql</category>
+        
+        <category>centos</category>
+        
+        <category>reset mysql root password</category>
+        
+        <category>recover mysql root password</category>
+        
+        
+        <category>linux,</category>
+        
+        <category>mysql</category>
+        
+      </item>
     
       <item>
         <title>Mysql Import And Export in CLI</title>
