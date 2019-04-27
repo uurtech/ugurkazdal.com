@@ -4,6 +4,10 @@ title: About
 permalink: /about/
 ---
 
-I'm Programmer for Python & Django. I've made quite a few web apps, especially on Django. Now, I am doing more on backend.
+Hello, This is Uğur Kazdal who tries to love programming, (not sure yet!), writes in here about technology, programming, docker, podman (hopefully), tips&tricks. 
+I want to write a blog post each day let's see if I can do that.
 
-email: agus[at]python.web.id
+Follow me on Github or Twitter or Even Linkedin
+* [github](https://github.com/uurtech)
+* [twitter](https://twitter.com/ugurkazdal)
+* [linkedin](https://www.linkedin.com/in/ugur-kazdal-88086a152/)

@@ -1,17 +1,19 @@
 ---
 layout: post
-title: "Install Damn Mysql To Centos And Get Root Password"
+title: Install Damn Mysql To Centos And Get Root Password
 date: 2019-04-27
 tags: [linux, mysql, centos, reset mysql root password,recover mysql root password]
 categories: linux, mysql
 ---
+
+**If you access to this web site for recovering mysql root password go to bottom of page**
 
 Sometimes it can be pain on the keyboard to handle mysql on Centos if you don't follow instructions. 
 So we need to focus on tutorials line by line. So Let's start with Mysql On Centos,
 
 First thing first, Which Mysql Version you need ? I prefer 5.7 but let's continue for MySql 8.0 then we can move on for MySql 5.7
 
-#Enable MySQL 8.0 Repository and install
+##Enable MySQL 8.0 Repository and install
 <pre>
 <code>
 sudo yum localinstall https://dev.mysql.com/get/mysql80-community-release-el7-1.noarch.rpm
@@ -19,7 +21,7 @@ sudo yum install mysql-community-server
 </code>
 </pre>
 
-#Enable for Mysql 5.7 and install
+##Enable for Mysql 5.7 and install
 <pre>
 <code>
 sudo yum localinstall https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm
@@ -50,7 +52,7 @@ Now can access mysqll by typing
 
 <pre><code>mysql -u root -p </code></pre>
 
-#Recover Mysql Root Password
+##Recover Mysql Root Password
 
 Sometimes when you do not log any information for you systems, you forget your root password, 
 
