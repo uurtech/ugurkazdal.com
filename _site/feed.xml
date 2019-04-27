@@ -5,8 +5,8 @@
     <description>Uğur KAZDAL Blog on Technology</description>
     <link>https://ugurkazdal.com/</link>
     <atom:link href="https://ugurkazdal.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 27 Apr 2019 12:36:32 +0300</pubDate>
-    <lastBuildDate>Sat, 27 Apr 2019 12:36:32 +0300</lastBuildDate>
+    <pubDate>Sat, 27 Apr 2019 13:15:41 +0300</pubDate>
+    <lastBuildDate>Sat, 27 Apr 2019 13:15:41 +0300</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -18,7 +18,8 @@ So we need to focus on tutorials line by line. So Let’s start with Mysql On Ce
 
 &lt;p&gt;First thing first, Which Mysql Version you need ? I prefer 5.7 but let’s continue for MySql 8.0 then we can move on for MySql 5.7&lt;/p&gt;
 
-&lt;p&gt;##Enable MySQL 8.0 Repository and install&lt;/p&gt;
+&lt;h1 id=&quot;enable-mysql-80-repository-and-install&quot;&gt;Enable MySQL 8.0 Repository and install&lt;/h1&gt;
+
 &lt;pre&gt;
 &lt;code&gt;
 sudo yum localinstall https://dev.mysql.com/get/mysql80-community-release-el7-1.noarch.rpm
@@ -26,7 +27,8 @@ sudo yum install mysql-community-server
 &lt;/code&gt;
 &lt;/pre&gt;
 
-&lt;p&gt;##Enable for Mysql 5.7 and install&lt;/p&gt;
+&lt;h1 id=&quot;enable-for-mysql-57-and-install&quot;&gt;Enable for Mysql 5.7 and install&lt;/h1&gt;
+
 &lt;pre&gt;
 &lt;code&gt;
 sudo yum localinstall https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm
@@ -57,7 +59,7 @@ sudo mysql_secure_installation
 
 &lt;pre&gt;&lt;code&gt;mysql -u root -p &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;##Recover Mysql Root Password&lt;/p&gt;
+&lt;h1 id=&quot;recover-mysql-root-password&quot;&gt;Recover Mysql Root Password&lt;/h1&gt;
 
 &lt;p&gt;Sometimes when you do not log any information for you systems, you forget your root password,&lt;/p&gt;
 

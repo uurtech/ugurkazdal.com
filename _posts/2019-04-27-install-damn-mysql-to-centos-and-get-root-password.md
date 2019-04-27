@@ -13,7 +13,9 @@ So we need to focus on tutorials line by line. So Let's start with Mysql On Cent
 
 First thing first, Which Mysql Version you need ? I prefer 5.7 but let's continue for MySql 8.0 then we can move on for MySql 5.7
 
-##Enable MySQL 8.0 Repository and install
+Enable MySQL 8.0 Repository and install
+==================
+
 <pre>
 <code>
 sudo yum localinstall https://dev.mysql.com/get/mysql80-community-release-el7-1.noarch.rpm
@@ -21,7 +23,9 @@ sudo yum install mysql-community-server
 </code>
 </pre>
 
-##Enable for Mysql 5.7 and install
+Enable for Mysql 5.7 and install
+==================
+
 <pre>
 <code>
 sudo yum localinstall https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm
@@ -52,7 +56,8 @@ Now can access mysqll by typing
 
 <pre><code>mysql -u root -p </code></pre>
 
-##Recover Mysql Root Password
+Recover Mysql Root Password
+==================
 
 Sometimes when you do not log any information for you systems, you forget your root password, 
 

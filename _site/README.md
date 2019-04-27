@@ -1,5 +1,5 @@
-##Contents
 
+#Contents
 
 * [Install Damn Mysql To Centos And Get Root Password »](https://ugurkazdal.com/linux,/mysql/2019/04/27/install-damn-mysql-to-centos-and-get-root-password.html)
 * [Mysql Import And Export in CLI »](https://ugurkazdal.com/linux/2019/04/10/mysql-import-and-export-in-cli.html)
