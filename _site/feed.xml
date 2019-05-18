@@ -5,9 +5,74 @@
     <description>Uğur KAZDAL Blog on Technology</description>
     <link>https://ugurkazdal.com/</link>
     <atom:link href="https://ugurkazdal.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 27 Apr 2019 13:15:41 +0300</pubDate>
-    <lastBuildDate>Sat, 27 Apr 2019 13:15:41 +0300</lastBuildDate>
+    <pubDate>Sat, 18 May 2019 10:21:21 +0300</pubDate>
+    <lastBuildDate>Sat, 18 May 2019 10:21:21 +0300</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>How to Position Banner Ads to Top on Construct 3</title>
+        <description>&lt;p&gt;We are building HTML5 and Mobile games with Construct 3 and we are using default Mobile Advert plugin which does not have any banner ads position option.&lt;/p&gt;
+
+&lt;p&gt;I’ve looked for it and there is no option available for banner ad position, so I wanted to try export the game as Android Studio project because it must use Native Android Ads SDK or something.&lt;/p&gt;
+
+&lt;p&gt;I’ve search for &lt;strong&gt;BOTTOM&lt;/strong&gt; keyword because banner ads only sit to bottom. And Yes I’ve found it then change it to &lt;strong&gt;TOP&lt;/strong&gt; then build in Android Studio,&lt;/p&gt;
+
+&lt;p&gt;So now we have damn top banner ads on our game.&lt;/p&gt;
+
+</description>
+        <pubDate>Sat, 18 May 2019 00:00:00 +0300</pubDate>
+        <link>https://ugurkazdal.com/construct/3/2019/05/18/how-to-position-banner-ads-to-top-on-construct-3.html</link>
+        <guid isPermaLink="true">https://ugurkazdal.com/construct/3/2019/05/18/how-to-position-banner-ads-to-top-on-construct-3.html</guid>
+        
+        <category>construct 3</category>
+        
+        <category>mobile ads</category>
+        
+        <category>ads position</category>
+        
+        <category>html5</category>
+        
+        <category>game</category>
+        
+        
+        <category>Construct</category>
+        
+        <category>3</category>
+        
+      </item>
+    
+      <item>
+        <title>Kill all processes on spesific port</title>
+        <description>&lt;p&gt;Sometimes you have multiple apps works on same port time to time. For example I use Docker for most of my app developments but sometimes when building laravel app I use &lt;em&gt;php artisan serve –port 80&lt;/em&gt; and all of sudden it runs on next available port which is mostly 81. So I kill all the process on port 80 !&lt;/p&gt;
+
+&lt;p&gt;Let’s look at how, first, we need to list all process on a spesific port in this case 80.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;lsof -t -i :80&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You can kill process one by one. But hey, we are on Linux so we need to have some tricks to automatize anything.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;kill $(lsof -t -i :80)&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;OMG. All of sudden. Port 80 is all free !&lt;/p&gt;
+</description>
+        <pubDate>Wed, 01 May 2019 00:00:00 +0300</pubDate>
+        <link>https://ugurkazdal.com/linux/2019/05/01/kill-all-process-on-spesific-port.html</link>
+        <guid isPermaLink="true">https://ugurkazdal.com/linux/2019/05/01/kill-all-process-on-spesific-port.html</guid>
+        
+        <category>linux</category>
+        
+        <category>cli</category>
+        
+        <category>lsof</category>
+        
+        <category>port</category>
+        
+        <category>process</category>
+        
+        
+        <category>linux</category>
+        
+      </item>
     
       <item>
         <title>Install Damn Mysql To Centos And Get Root Password</title>
